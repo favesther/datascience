@@ -1,3 +1,3 @@
 # datascience
 
-labs and assignment of course IMT 572 Data Science Ⅱ: machine learning and economics.
+labs and assignments of course IMT 574 Data Science Ⅱ: machine learning and economics.

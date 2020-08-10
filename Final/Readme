@@ -1,2 +1,48 @@
 This is a team project conducted by Tony Chu, Chiaoya Chang, Chen Song and Xinyi Yang(myself).
 This project defines the popularity of restaurant listed on Yelp and predicts the value in annal. 
+
+Folder Structure
+●	Main structure
+project/
+├── input/
+├── ref/
+├── result/
+├── work/
+└── script.ipynb
+
+●	Explanation
+1.	Have the python script files that do things in the project root. 
+2.	[input/]: Contains the original, or raw, data files. Contents in this folder should be treated as read-only.
+3.	[ref/]: Contains reference files, i.e. from research.
+4.	[result/]: Contains the final results and explanatory markdown files.
+5.	[work/]: The working directory, from my SAS days, was used to store temporary data files. I like having the main console code directly in the project folder outside of the sub-folders, and storing intermediate data that I may want to reference later in the work sub-folder.
+
+●	Rules for naming script files
+1.	1_dataPrepare_[what]_[when]_[other comment].ipynb
+example: 1_dataPrepare_review_2018_test.ipynb
+2.	2_featureExtract_[what]_[when]_[other comment].ipynb
+example: 2_featureExtract_user_2018_test.ipynb
+3.	3_model_[what]_[when]_[other comment].ipynb
+example: 3_model_xgBoost_2018.ipynb
+4.	4_interprete_[what]_[when]_[other comment].ipynb
+example: 4_interprete_accuracy.ipynb
+
+
+
+
+
+
+
+
+●	Details
+1.	Root
+a.	[2_featureExtract_user_1819_v1.ipynb]
+2.	[input/]
+a.	
+3.	[ref/]
+a.	
+4.	[result/]
+a.	
+5.	[work/]
+a.	[./user.csv]: users after 2018 with extracted features
+

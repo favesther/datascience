@@ -85,10 +85,32 @@ str(crime)
 Let's start by looking at the years in which crimes were committed. What is the earliest year in the dataset? Are there any distinct trends with the annual number of crimes committed in the dataset?
 
 Subset the data to only include crimes that were committed after 2011 (remember good practices of data provenance!). Going forward, we will use this data subset.
-```{r}
-crime <- crime %>% separate(Occurred.Date,c("occur_day","occur_month","occur_year"))
-sort(unique(crime$occur_year))
-paste("The earliest year in the dataset when crimes were committed in 1908.")
+```{r b1}
+# separate the occurred date to day, month and year
+
+crime <- crime %>% separate(Occurred.Date,c("occur_day","occur_month","occur_year")) %>% 
+  na.omit(occur_year)
+
+# find the earliest year
+paste("The earliest year in the dataset when crimes were committed in", min(crime$occur_year),".")
+
+# make a table to see the distribution of the years
+year <- crime %>% mutate(year_fct = as.factor(occur_year))
+table(year$year_fct)
+
+# changes the y axis scale into log10 scale to see the trend, 
+library(tidyverse)
+crime %>% ggplot()+
+  geom_bar(mapping=aes(x=occur_year))+
+  scale_x_discrete(breaks = round(seq(min(crime$occur_year), max(crime$occur_year), by = 3),1))+ # less ticks to avoid overlap
+  scale_y_log10() # because the original y axis makes the earlier years invisible
+
+```
+
+\textcolor{purple}{RESPONSE: There are fewer commits before 1989. There's an increase in the number of crime commissons from 1989 to 2007. The number of crime commissions are similar after the year of 2008.}
+
+```{r b2}
+
 # subset data to crimes committed after 2011
 crime_new <- crime %>% filter(occur_year>2011)
 

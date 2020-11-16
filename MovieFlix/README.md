@@ -1,4 +1,8 @@
 # Movie Recommendation Engine
+
+* Team Name: MovieFlix  
+* Team Members: Vishwa Pardeshi, Subhiksha Mukuntharaj, Xinyi Yang, Sahana Bhat  
+
 ## Abstract
 In recent years, we have seen major companies in the technology, media, and telecom (TMT) sector using recommendation engines to improve customer experience. Recommendation systems have the potential to change the way websites communicate with users and to allow companies to maximize their ROI based on the information they can gather on each customer’s preferences and purchases. According to an article “The Netflix Recommender System: Algorithms, Business Value, and Innovation” written by Netflix executives Carlos A. Gomez-Uribe and Neil Hunt, the video streaming service’s AI recommendation system saves the company around $1 billion each year. This allows them to invest more money on new content which viewers will continue to view, giving them a good ROI.
 
